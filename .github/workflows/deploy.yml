@@ -1,6 +1,7 @@
 name: Deploy ai_full
 
 on:
+  workflow_dispatch:  # 允许手动触发
   push:
     branches:
       - master   # push 到 master 分支触发部署
