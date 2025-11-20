@@ -23,5 +23,5 @@ jobs:
         passphrase: ${{ secrets.SERVER_SSH_PASSPHRASE }}
         port: 22
         script: |
-          cd ~/workspace/ai_full
+          cd /home/ubuntu/work_space/ai_full
           ./deploy.sh
