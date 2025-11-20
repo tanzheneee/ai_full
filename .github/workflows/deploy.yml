@@ -20,6 +20,7 @@ jobs:
         host: ${{ secrets.AWS_HOST }}
         username: ubuntu
         key: ${{ secrets.AWS_SSH_KEY }}
+        passphrase: ${{ secrets.SERVER_SSH_PASSPHRASE }}
         port: 22
         script: |
           cd ~/workspace/ai_full
