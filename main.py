@@ -22,15 +22,16 @@ NACOS_GROUP = os.environ.get('NACOS_GROUP', "DEFAULT_GROUP")
 NACOS_DATA_ID = os.environ.get('NACOS_DATA_ID', "ai_app.yaml")
 NACOS_USERNAME = os.environ.get('NACOS_USERNAME', "")
 NACOS_PWD = os.environ.get('NACOS_PWD', "")
+LOG_DIR = os.environ.get('LOG_DIR', "")
 
 # 存储全局配置
 APP_CONFIG = {}
 
 # 初始化日志
 setup_logging(
-    app_name="ai_app",
+    app_name="ai_full",
     log_level="INFO",
-    log_dir="/var/log/fastapi",
+    log_dir= LOG_DIR,
     enable_console=True,
     enable_file=True
 )

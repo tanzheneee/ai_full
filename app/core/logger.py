@@ -3,7 +3,9 @@ import sys
 from pathlib import Path
 from logging.handlers import RotatingFileHandler
 from pythonjsonlogger import jsonlogger
+import os
 
+LOG_DIR = os.environ.get('LOG_DIR', "")
 
 class CustomJsonFormatter(jsonlogger.JsonFormatter):
     """自定义 JSON 格式化器"""
@@ -19,9 +21,9 @@ class CustomJsonFormatter(jsonlogger.JsonFormatter):
 
 
 def setup_logging(
-        app_name: str = "fastapi_app",
+        app_name: str = "ai_full",
         log_level: str = "INFO",
-        log_dir: str = "/var/log/fastapi",
+        log_dir: str = LOG_DIR,
         enable_console: bool = True,
         enable_file: bool = True
 ):
