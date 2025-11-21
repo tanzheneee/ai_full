@@ -1,3 +1,19 @@
 fastapi
 uvicorn[standard]
 gunicorn
+
+# MySQL 连接
+mysql-connector-python # 或 PyMySQL
+# SQLAlchemy 或类似 ORM
+SQLAlchemy
+pymysql
+cryptography  # 可选，用于加密连接
+
+# Nacos 客户端
+python-nacos
+
+# 日志系统 (用于结构化日志，推荐 python-json-logger)
+python-json-logger
+
+# 加密
+bcrypt

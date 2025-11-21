@@ -20,6 +20,9 @@ ENV PATH=/root/.local/bin:$PATH
 # 复制整个项目（你的 main.py 在根目录）
 COPY . .
 
+# 创建日志目录，确保 Filebeat 有权限访问
+RUN mkdir -p /var/log/app && chmod -R 777 /var/log/app
+
 EXPOSE 8000
 
 # 使用 gunicorn + uvicorn worker 运行 FastAPI
