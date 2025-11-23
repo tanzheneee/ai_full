@@ -36,7 +36,7 @@ RUN chown -R appuser:appuser $APP_HOME
 USER appuser
 
 # 创建日志目录，确保 Filebeat 有权限访问
-RUN mkdir -p /home/ubuntu/logs/ai_full && chmod -R 777 /home/ubuntu/logs/ai_full
+#RUN mkdir -p /home/ubuntu/logs/ai_full && chmod -R 777 /home/ubuntu/logs/ai_full
 
 EXPOSE 8000
 
