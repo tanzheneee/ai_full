@@ -13,6 +13,9 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+ARG APP_DIR=/app
+ENV APP_HOME=${APP_DIR}
+
 # 创建一个非特权用户 'appuser'
 # 🔑 关键：指定 UID 和 GID 为 1000，以匹配宿主机上的 'ubuntu' 用户 (最常见情况)
 ARG USER_ID=1000
